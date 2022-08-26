@@ -1,10 +1,6 @@
-locals {
-  name = "${var.name}-socat"
-}
-
 resource "kubernetes_deployment_v1" "socat" {
   metadata {
-    name = local.name
+    name = var.name
   }
 
   spec {
@@ -23,7 +19,7 @@ resource "kubernetes_deployment_v1" "socat" {
 
           port {
             container_port = var.container_port
-            protocol = "TCP"
+            protocol       = "TCP"
           }
         }
       }
