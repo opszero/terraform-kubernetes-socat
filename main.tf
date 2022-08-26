@@ -13,7 +13,7 @@ resource "kubernetes_deployment_v1" "socat" {
           name  = "socat"
 
           args = [
-            "tcp-listen:5432,fork,reuseaddr",
+            "tcp-listen:${var.container_port},fork,reuseaddr",
             "tcp-connect:${var.host}:${var.container_port}"
           ]
 
