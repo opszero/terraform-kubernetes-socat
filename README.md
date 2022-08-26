@@ -1,6 +1,22 @@
 <!-- BEGIN_TF_DOCS -->
-# terraform-kubernetes-socat
+# socat (Kubernetes)
+
 Access internal resources through Kubernetes port-forwarding
+
+```
+module "rds-forwarder" {
+  source = "https://github.com/opszero/terraform-kubernetes-socat"
+
+  name = "rds-forwarder"
+  host = "rds-endpoint.aws.com"
+  container_port = 5432
+}
+
+```
+
+```
+kubectl port-forward deployments/rds-forwader 5431:5432
+```
 ## Providers
 
 | Name | Version |
@@ -12,7 +28,6 @@ Access internal resources through Kubernetes port-forwarding
 |------|-------------|------|---------|:--------:|
 | <a name="input_container_port"></a> [container\_port](#input\_container\_port) | The port to route requests to. | `string` | n/a | yes |
 | <a name="input_host"></a> [host](#input\_host) | The host name to route requests to. | `string` | n/a | yes |
-| <a name="input_name"></a> [name](#input\_name) | n/a | `string` | n/a | yes |
 ## Resources
 
 | Name | Type |
