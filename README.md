@@ -1,5 +1,5 @@
 <!-- BEGIN_TF_DOCS -->
-# socat (Kubernetes)
+# socat
 
 Access internal resources through Kubernetes port-forwarding
 
