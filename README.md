@@ -15,8 +15,17 @@ module "rds-forwarder" {
 
 ```
 
+On the command line:
+
 ```
 kubectl port-forward deployments/rds-forwader 5431:5432
+```
+
+This will then route requests to:
+
+```
+psql -h 0.0.0.0 -p 5431 -U username -W databasename
+
 ```
 ## Providers
 
