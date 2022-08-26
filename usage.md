@@ -1,4 +1,4 @@
-# socat (Kubernetes)
+# socat
 
 Access internal resources through Kubernetes port-forwarding
 
