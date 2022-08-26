@@ -4,10 +4,11 @@ Access internal resources through Kubernetes port-forwarding
 
 ```
 module "rds-forwarder" {
-  source = "https://github.com/opszero/terraform-kubernetes-socat"
+  source = "github.com/opszero/terraform-kubernetes-socat"
 
   name = "rds-forwarder"
-  host = "rds-endpoint.aws.com"
+  destination_host = "opszero.askldjasdkl.us-east-1.rds.amazonaws.com"
+  destination_port = 5432
   container_port = 5432
 }
 

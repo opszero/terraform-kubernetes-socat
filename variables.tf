@@ -1,9 +1,19 @@
-variable "host" {
+variable "name" {
   type        = string
-  description = "The host name to route requests to."
+  description = "Name of the deployment"
 }
 
-variable "container_port" {
+
+variable "destination_host" {
   type        = string
-  description = "The port to route requests to."
+  description = "Host name to route requests to."
+}
+
+variable "destination_port" {
+  description = "Port to listen to on the container"
+}
+
+
+variable "container_port" {
+  description = "Port to listen to on the container"
 }
