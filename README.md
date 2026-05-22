@@ -8,6 +8,8 @@ module "rds-forwarder" {
   source = "github.com/opszero/terraform-kubernetes-socat"
 
   name = "rds-forwarder"
+  namespace = "dev'
+
   destination_host = "opszero.askldjasdkl.us-east-1.rds.amazonaws.com"
   destination_port = 5432
   container_port = 5432
@@ -40,6 +42,7 @@ psql -h 0.0.0.0 -p 5431 -U username -W databasename
 | <a name="input_destination_host"></a> [destination\_host](#input\_destination\_host) | Host name to route requests to. | `string` | n/a | yes |
 | <a name="input_destination_port"></a> [destination\_port](#input\_destination\_port) | Port to listen to on the container | `any` | n/a | yes |
 | <a name="input_name"></a> [name](#input\_name) | Name of the deployment | `string` | n/a | yes |
+| <a name="input_namespace"></a> [namespace](#input\_namespace) | Namespace to deploy the socat deployment in. | `string` | `"default"` | no |
 ## Resources
 
 | Name | Type |
