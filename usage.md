@@ -7,6 +7,8 @@ module "rds-forwarder" {
   source = "github.com/opszero/terraform-kubernetes-socat"
 
   name = "rds-forwarder"
+  namespace = "dev'
+
   destination_host = "opszero.askldjasdkl.us-east-1.rds.amazonaws.com"
   destination_port = 5432
   container_port = 5432

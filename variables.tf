@@ -3,6 +3,12 @@ variable "name" {
   description = "Name of the deployment"
 }
 
+variable "namespace" {
+  type        = string
+  description = "Namespace to deploy the socat deployment in."
+
+  default = "default"
+}
 
 variable "destination_host" {
   type        = string

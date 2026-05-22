@@ -1,6 +1,7 @@
 resource "kubernetes_deployment_v1" "socat" {
   metadata {
-    name = var.name
+    name      = var.name
+    namespace = var.namespace
 
     labels = {
       name = var.name
